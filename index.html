@@ -1,51 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myapp">
+<html lang="en" ng-app="shoppingcart">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <ui-view></ui-view>
-    <div ng-controller="MyCtrl">
-     <!--   <input type = "text" ng-model="myval"/>
-        <button ng-click="onClick">click</button>-->
-   
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Seniority</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="stu in students">
-                <td>{{stu.name | customName}} </td>
-                <td>{{stu.age}}</td>
-                <td>{{stu.senior}}</td>
-                <td>
-                    <button ng-click = "onViewBtnClick(stu)">View Details</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <student-details current-student = "selectedStudent" my-title="Welcome"></student-details>
-<!--  <div ng-show="selectedStudent">
-        <h2>Student Details</h2>
-        <p>Name : {{selectedStudent.name}}</p>
-        <p>Age : {{selectedStudent.age}}</p> 
-        <p>Senior : {{selectedStudent.senior}}</p>
-    </div>-->
-</div>
+    <app></app>
     <script src = "angular.js"></script>
     <script src = "angular-ui-router.js"></script>
-    <script src = "app.js"></script>
-    <script src = "app.service.js"></script>
-    <script src = "app.filter.js"></script>
-    <script src = "app.component.js"></script>
+    <script src = "src/shared/shared.module.js"></script>
+    <script src = "src/product/product.module.js"></script>
+    <script src = "src/cart/cart.module.js"></script>
+    <script src = "src/app.module.js"></script>
+    <script src = "src/app.constant.js"></script>
+    <script src = "src/product/components/add-product/add-product.component.js"></script>
+    <script src = "src/product/components/product-details/product-details.component.js"></script>
+    <script src = "src/product/components/product-list/product-list.component.js"></script>
+    <script src = "src/cart/components/cart/cart.component.js"></script>
+    <script src = "src/product/product.service.js"></script>
+    <script src = "src/app.component.js"></script>
+
     
 </body>
 </html>
