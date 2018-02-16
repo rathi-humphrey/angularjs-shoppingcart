@@ -28,10 +28,21 @@
 
 .product{
     display: inline-block;
-    width: 30vw;
+    width: 50vw;
     height: 200px;
     border: 1px solid #000;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+}
+
+input.ng-invalid.ng-dirty{
+    border: 1px solid red;
+}
+
+.directive{
+    border: 1px dotted blue;
+    padding: 10px;
+    margin: 10px;
+    background-color: yellow;
 }

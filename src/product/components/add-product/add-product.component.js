@@ -3,12 +3,16 @@ angular.module('shoppingcart.product')
     function(ProductService){
         this.newProduct = {};
 
-        this.onFormSubmit = function(e){
+        this.onFormSubmit = function(e,form){
             e.preventDefault();
-            console.log(this.newProduct);
-            ProductService.addProduct(this.newProduct).then(function(){
-                alert('added successfully');
-            });
+            if(form.$valid){
+                console.log(this.newProduct);
+                ProductService.addProduct(this.newProduct).then(function(){
+                    alert('added successfully');
+                });
+            }else{
+                alert('Form Invalid');
+            }
         };
     }])
     .component('addProduct', {
